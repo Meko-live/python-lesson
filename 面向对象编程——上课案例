@@ -1,0 +1,25 @@
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+
+    def print_area(self):
+        print(self.length * self.width)
+
+    def print_perimeter(self):
+        print(self.legnth * 2 + self.width * 2)
+        
+if __name__ == "__main__":
+    rectangle = Rectangle(1,2)
+    rectangle.print_area()
+
+继承
+class Square(Rectangle):
+    def __init__(self, width):
+        super().__init__(width, width)
+
+class Square(Rectangle):
+    def __init__(self, width):
+        self.length = width
+        self.width = width
